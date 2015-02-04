@@ -1,95 +1,64 @@
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
 
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
-/* Base structure */
-html,
+/*hack stuff*/
 body {
-  height: 100%;
-  background-color: #333;
+  margin-bottom: 200px;
 }
 
-body {
-  color: #fff;
+/*this is where jQuery appends the instagram json response*/
+#instagram {
+  float: left;
+  padding: 20px;
+}
+
+/*around each image*/
+.instagram-wrap {
+  float: left;
+  position: relative;
+  background: white;
+  padding: 5px;
+  margin: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-wrap .likes {
+  height: 16px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 0 5px 0 22px;
+  line-height: 16px;
+  border: 1px solid #ddd;
+  background: white url('fav.png') no-repeat 2px 0;
+  opacity: 0.6;
+}
+
+/*does what it says*/
+.clearfix {
+   clear:both;
+}
+
+/*wrapper for more pics*/
+#showMore{
+  background: #202628;
+  margin: 20px 15px 28px;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+/*button for more pics if available*/
+#more {
+padding: 10px;
+margin: 20px;
+color: #CCC;
+font-size: 20px;
+line-height: 22px;
+display: block;
+font-family: "brandon_bold",Arial,Helvetica,sans-serif;
 }
 
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
+#main-navigation #navigation li.has-drop-down.trend{display: none;}
 
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
+/******  hide the footer for easier dev *********/
+#sticky-footer-wrap{/* display: none; */ }
 
-/* Padding for Spacing */
-.inner {
-  padding: 30px;
-}
-
-/* Cover */
-.cover {
-  padding: 0 20px;
-}
-
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-/* Affix and center */
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
-}
+/******  hide the footer flyouts for easier dev *********/
+.sticky-flyout, #Footer_Flyout_1, #Footer_Flyout_2{ /* display: none !important; */ }
